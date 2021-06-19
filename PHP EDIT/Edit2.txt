@@ -1,0 +1,51 @@
+<body>
+<h2> EDIT PAGE 1 </h2>
+
+<?php
+$con=mysql_connect("localhost","root","");
+
+$db=mysql_select_db("nirmal");
+
+$eid=$_GET['eid'];
+
+$sql="select * from emp where eid=$eid";
+
+
+$res=mysql_query($sql);
+
+
+$a="";	$b="";	$c=="";
+
+	while($row=mysql_fetch_array($res))
+	{
+	echo "<tr> ";
+	$a=$row['eid'];
+	$b=$row['ename'];
+	$c=$row['phone'];
+	}
+
+echo " eid = $a  ena =$b phn=$c ";
+?>
+
+<form name="f1" action="Edit3.php" method="post">
+<h3>
+Emp id 
+<input type="text" readonly name="eid" value="<?php echo $a ?>">
+</h3>
+
+<h3>
+Emp Name
+<input type="text" readonly name="ename" value="<?php echo $b ?>">
+</h3>
+
+<h3>
+Update phone
+<input type="text" name="phone" value="<?php echo $c ?>">
+</h3>
+
+<h3>
+Click to proceed
+<input type="submit" name="sub" value="UPDATE NOW">
+</h3>
+
+

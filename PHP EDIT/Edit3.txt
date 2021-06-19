@@ -1,0 +1,36 @@
+<body>
+<h2> EDIT PAGE 3 </h2>
+
+<?php
+$con=mysql_connect("localhost","root","");
+
+$db=mysql_select_db("nirmal");
+
+$a=$_POST['eid'];
+$b=$_POST['ename'];
+$c=$_POST['phone'];
+
+$sql="update emp set phone='$c' where eid=$a";
+
+
+$res=mysql_query($sql);
+
+$sql2="select * from emp where eid=$a";
+
+$res=mysql_query($sql2);
+
+
+
+$a="";	$b="";	$c=="";
+
+	while($row=mysql_fetch_array($res))
+	{
+	$a=$row['eid'];
+	$b=$row['ename'];
+	$c=$row['phone'];
+	}
+
+echo "<br>  UPDATED YOUR PHONE NO <br>";
+echo " eid = $a  ena =$b phn=$c ";
+?>
+

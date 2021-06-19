@@ -1,0 +1,32 @@
+<body>
+<h2> INSERT DATA @ EMP </h2>
+<h3>
+<form name="f1" action="emp_02_php02.php" method="post">
+Enter EMP ID
+<input type="text" name="eid" value="">
+</h3>
+
+<h3>
+Enter emp name
+<input type="text" name="fna" value="">
+</h3>
+
+<h3>
+Address 
+<input type="text" name="addr" value="">
+</h3>
+<h3>
+Dob 
+<input type="text" name="dob" value="">
+</h3>
+<h3>
+Salary 
+<input type="text" name="sal" value="">
+</h3>
+<h3>
+Click
+<input type="submit" name="sub" value="submit">
+</h3>
+
+</form>
+</body>

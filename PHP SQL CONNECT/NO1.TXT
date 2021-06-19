@@ -1,0 +1,43 @@
+<body>
+<h2> INSERT DATA @ EMP page 2 </h2>
+
+<?php
+
+$con=mysql_connect("localhost","root","");
+echo "<br> connection done ".$con;
+
+$db=mysql_select_db("onward");
+echo "<br> database selected ".$db;
+
+$a=$_POST['eid'];
+$b=$_POST['fna'];
+$c=$_POST['addr'];
+$d=$_POST['dob'];
+$e=$_POST['sal'];
+
+	if($a == "")
+	echo "<br> eid field blank";
+	else if($b == "")
+	echo "<br> name field blank";
+	else if($c == "")
+	echo "<br> adress field blank";
+	else if($d == "")
+	echo "<br> dob field blank";
+	else if($e == "")
+	echo "<br> salary field blank";
+	{
+	$sql="insert into emp_02 values($a,'$b','$c','$d','$e')";
+
+	echo "<br> sql is ".$sql;
+	
+	$res=mysql_query($sql);
+	
+	if($res) //true		
+	echo "<br> data inserted <br>";
+	else
+	echo "<br> data NOT inserted <br>";
+	}
+?>
+<br>
+<hr>
+<a href="emp_02_php01.php"> click to insert again </a>

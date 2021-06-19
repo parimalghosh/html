@@ -1,0 +1,483 @@
+<html>
+
+<script language="javascript">
+
+function chk()
+{
+	a=document.f1.nm.value;
+        x=document.f1.addr.value ;
+	b=document.f1.eml.value;
+	c=document.f1.psw.value;
+	d=document.f1.cpsw.value;
+	m=document.f1.rad[0].checked;
+	f=document.f1.rad[1].checked;
+	s=document.f1.nat.selectedIndex;
+	
+	
+
+	if(a=="")
+	{
+	alert("Enter your name, name field is empty");
+	return false;
+	}
+
+	else if(a.length>15)
+	{
+	alert("Name field contain only 15 character");
+	return false;
+	}
+
+        else if(x=="")
+	{
+	alert("Enter your Address, Address field is empty");
+	return false;
+	}
+
+	
+	else if(b=="")
+	{
+	alert("Email Id field is blank, enter User Id");
+	return false;
+	}
+
+	else if(c=="")
+	{
+	alert("Password field is blank, enter password");
+	return false;
+	}
+
+	else if((c.search(/[a-z]+/)==-1)||(c.search(/[A-Z]+/)==-1)||(c.search(/[0-9]+/)==-1)||(c.search(/[!@#$%^&*]+/)==-1) )
+	{
+	alert("Password must contain atleast one lowercase one uppercase one number and one character(!@#$%^&*)")
+	return false;
+	}
+
+	else if(c.length<8)		
+	{
+	alert("Password is too short, but be eight character");
+	return false;
+	}
+	
+	else if(c!=d)
+	{
+	alert("Password not match, enter password correctly");
+	return false;
+	}
+	
+	else if(m==false&&f==false)
+	{
+	alert("Choose your gender");
+	return false;
+	}
+
+	else if(s==0)
+	{
+	alert("Please select your Nationality");
+	return false;
+	}
+	
+	else 
+	{
+	alert("Want to submit?");
+	}
+		
+}
+
+function back() {
+
+alert("The form was reset");
+}
+
+
+</script>
+
+<body>
+<form name="f1" onSUBMIT="return chk()" onRESET="back()">
+<table>
+
+<th> Registration form</th>
+
+<tr>
+<td> Name </td>
+<td> <input type="text" name="nm" value=""></td>
+</tr>
+
+<tr>
+<td id = "dob"> Date Of Birth </td>
+<td> 
+<select>
+<option>Day</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+
+
+</select>
+<select>
+<option>Month</option>
+<option>January</option>
+<option>February</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option>
+
+
+</select>
+<select>
+<option>Year</option>
+<option>2016</option>
+<option>2015</option>
+<option>2014</option>
+<option>2013</option>
+<option>2012</option>
+<option>2011</option>
+<option>2010</option>
+<option>2009</option>
+<option>2008</option>
+<option>2007</option>
+<option>2006</option>
+<option>2005</option>
+<option>2004</option>
+<option>2003</option>
+<option>2002</option>
+<option>2001</option>
+<option>2000</option>
+<option>1999</option>
+<option>1998</option>
+<option>1997</option>
+<option>1996</option>
+<option>1995</option>
+<option>1994</option>
+<option>1993</option>
+<option>1992</option>
+<option>1991</option>
+<option>1990</option>
+<option>1989</option>
+<option>1988</option>
+<option>1987</option>
+<option>1986</option>
+<option>1985</option>
+<option>1984</option>
+<option>1983</option>
+<option>1982</option>
+<option>1981</option>
+<option>1980</option>
+<option>1979</option>
+<option>1978</option>
+<option>1977</option>
+<option>1976</option>
+<option>1975</option>
+<option>1974</option>
+<option>1973</option>
+<option>1972</option>
+<option>1971</option>
+<option>1970</option>
+<option>1969</option>
+<option>1968</option>
+<option>1967</option>
+<option>1966</option>
+<option>1965</option>
+<option>1964</option>
+<option>1963</option>
+<option>1962</option>
+<option>1961</option>
+<option>1960</option>
+<option>1959</option>
+<option>1958</option>
+<option>1957</option>
+<option>1956</option>
+<option>1955</option>
+<option>1954</option>
+<option>1953</option>
+<option>1952</option>
+<option>1951</option>
+<option>1950</option>
+<option>1949</option>
+<option>1948</option>
+<option>1947</option>
+<option>1946</option>
+<option>1945</option>
+<option>1944</option>
+<option>1943</option>
+<option>1942</option>
+<option>1941</option>
+<option>1940</option>
+<option>1939</option>
+<option>1938</option>
+<option>1937</option>
+<option>1936</option>
+<option>1935</option>
+<option>1934</option>
+<option>1933</option>
+<option>1932</option>
+<option>1931</option>
+<option>1930</option>
+<option>1929</option>
+<option>1928</option>
+<option>1927</option>
+<option>1926</option>
+<option>1925</option>
+<option>1924</option>
+<option>1923</option>
+<option>1922</option>
+<option>1921</option>
+<option>1920</option>
+<option>1919</option>
+<option>1918</option>
+<option>1917</option>
+<option>1916</option>
+<option>1915</option>
+<option>1914</option>
+<option>1913</option>
+<option>1912</option>
+<option>1911</option>
+<option>1910</option>
+<option>1909</option>
+<option>1908</option>
+<option>1907</option>
+<option>1906</option>
+<option>1905</option>
+
+
+
+</select>
+</tr>
+
+<td id = "address">Address</td>
+<td>
+<input type = "text" name = "addr" placeholder = "Write Full Address" >
+</td>
+</tr>
+
+<tr>
+<td> Email Id </td>
+<td> <input type="email" name="eml" value=""></td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" name="psw" value=""></td>
+</tr>
+
+<tr>
+<td> Confirm Password</td>
+<td><input type="password" name="cpsw" value=""></td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td><input type="radio" name="rad1">Male
+	<input type="radio" name="rad">Female</td>
+</tr>
+
+<tr>
+<td> Nationality </td>
+<td> 
+<select name = "nat">
+<option>---Select---</option>
+<option>Albanian</option>
+<option>Algerian</option>
+<option>American</option>
+<option>Andorran</option>
+<option>Angolan</option>
+<option>Argentinian</option>
+<option>Armenian</option>
+<option>Australian</option>
+<option>Austrian</option>
+<option>Azerbaijani</option>
+<option>Bahamian</option>
+<option>Bangladeshi</option>
+<option>Barbadian</option>
+<option>Belorussian</option>
+<option>Belgian</option>
+<option>Beninese</option>
+<option>Bhutanese</option>
+<option>Bolivian</option>
+<option>Bosnian</option>
+<option>Brazilian</option>
+<option>British</option>
+<option>Briton</option>
+<option>Bruneian</option>
+<option>Bulgarian</option>
+<option>Burmese</option>
+<option>Burundian</option>
+<option>Cambodian</option>
+<option>Cameroonian</option>
+<option>Canadian</option>
+<option>Chadian</option>
+<option>Chilean</option>
+<option>Chinese</option>
+<option>Colombian</option>
+<option>Congolese</option>
+<option>Croatian</option>
+<option>Cuban</option>
+<option>Cypriot</option>
+<option>Czech</option>
+<option>Dane</option>
+<option>Dominican</option>
+<option>Ecuadorean</option>
+<option>Egyptian</option>
+<option>Salvadorean</option>
+<option>Englishman</option>
+<option>Eritrean</option>
+<option>Estonian</option>
+<option>Ethiopian</option>
+<option>Fijian</option>
+<option>Finn</option>
+<option>Frenchman</option>
+<option>Gabonese</option>
+<option>Gambian</option>
+<option>Georgian</option>
+<option>German</option>
+<option>Ghanaian</option>
+<option>Greek</option>
+<option>Grenadian</option>
+<option>Guatemalan</option>
+<option>Guinean</option>
+<option>Guyanese</option>
+<option>Haitian</option>
+<option>Dutchman</option>
+<option>Honduran</option>
+<option>Hungarian</option>
+<option>Icelander</option>
+<option>Indian</option>
+<option>Indonesian</option>
+<option>Iranian</option>
+<option>Iraqi</option>
+<option>Irishman</option>
+<option>Israeli</option>
+<option>Italian</option>
+<option>Jamaican</option>
+<option>Japanese</option>
+<option>Jordanian</option>
+<option>Kazakh</option>
+<option>Kenyan</option>
+<option>Korean</option>
+<option>Kuwaiti</option>
+<option>Laotian</option>
+<option>Latvian</option>
+<option>Lebanese</option>
+<option>Liberian</option>
+<option>Libyan</option>
+<option>Liechtensteiner</option>
+<option>Lithuanian</option>
+<option>Luxembourger</option>
+<option>Macedonian</option>
+<option>Madagascan</option>
+<option>Malawian</option>
+<option>Malaysian</option>
+<option>Maldivian</option>
+<option>Malian</option>
+<option>Maltese</option>
+<option>Mauritanian</option>
+<option>Mauritian</option>
+<option>Mexican</option>
+<option>Moldovan</option>
+<option>Monacan</option>
+<option>Mongolian</option>
+<option>Montenegrin</option>
+<option>Moroccan</option>
+<option>Mozambican</option>
+<option>Namibian</option>
+<option>Nepalese</option>
+<option>Nicaraguan</option>
+<option>Nigerien</option>
+<option>Nigerian</option>
+<option>Norwegian</option>
+<option>Pakistani</option>
+<option>Panamanian</option>
+<option>Paraguayan</option>
+<option>Peruvian</option>
+<option>Filipino</option>
+<option>Pole</option>
+<option>Portuguese</option>
+<option>Qatari</option>
+<option>Romanian</option>
+<option>Russian</option>
+<option>Rwandan</option>
+<option>Saudi</option>
+<option>Scot</option>
+<option>Senegalese</option>
+<option>Serbian</option>
+<option>Singaporean</option>
+<option>Slovak</option>
+<option>Slovenian</option>
+<option>Somali</option>
+<option>Spaniard</option>
+<option>SriLankan</option>
+<option>Sudanese</option>
+<option>Surinamese</option>
+<option>Swazi</option>
+<option>Swede</option>
+<option>Swiss</option>
+<option>Syrian</option>
+<option>Taiwanese</option>
+<option>Tadzhik</option>
+<option>Tanzanian</option>
+<option>Thai</option>
+<option>Togolese</option>
+<option>Trinidadian</option>
+<option>Tunisian</option>
+<option>Turk</option>
+<option>Ugandan</option>
+<option>Ukrainian</option>
+<option>Uruguayan</option>
+<option>Uzbek</option>
+<option>Venezuelan</option>
+<option>Vietnamese</option>
+<option>Welshman</option>
+<option>Yemeni</option>
+<option>Yugoslav</option>
+<option>Zambian</option>
+<option>Zimbabwean</option>
+</select>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td><input type="submit" name="sub" value="SUBMIT"></td>
+<td><input type="reset" name="res" value="RESET" ></td>
+</tr> 
+
+
+</body>
+
+</html>
